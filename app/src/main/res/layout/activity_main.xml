@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/scoreTeam1"
+            android:text="0"
+            style="@style/ScoreStyle" />
+
+        <TextView
+            android:id="@+id/teamName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="50dp"
+            android:text="Team 1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/plusTeam1"
+            android:layout_width="@dimen/size"
+            android:layout_height="@dimen/size"
+            android:layout_below="@+id/teamName1"
+            android:layout_alignEnd="@+id/scoreTeam1"
+            android:layout_alignRight="@+id/scoreTeam1"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="-161dp"
+            android:layout_marginRight="-161dp"
+            android:onClick="increaseScore"
+            style="@style/PlusButtons"/>
+
+        <ImageButton
+            android:id="@+id/minusTeam1"
+            android:layout_width="@dimen/size"
+            android:layout_height="@dimen/size"
+            android:layout_below="@+id/teamName1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="33dp"
+            android:onClick="decreaseScore"
+            style="@style/MinusButtons" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/teamName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="151dp"
+            android:layout_marginLeft="151dp"
+            android:layout_marginTop="44dp"
+            android:text="Team 2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/minusTeam2"
+            android:layout_width="@dimen/size"
+            android:layout_height="@dimen/size"
+            android:layout_below="@+id/teamName2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
+            android:onClick="decreaseScore"
+            android:layout_marginTop="33dp"
+            style="@style/MinusButtons" />
+
+        <TextView
+            android:id="@+id/scoreTeam2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/teamName2"
+            android:layout_marginStart="86dp"
+            android:layout_marginLeft="86dp"
+            android:onClick="increaseScore"
+            android:layout_marginTop="46dp"
+            android:layout_toEndOf="@+id/minusTeam2"
+            android:layout_toRightOf="@+id/minusTeam2"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/plusTeam2"
+            android:layout_width="@dimen/size"
+            android:layout_height="@dimen/size"
+            android:layout_below="@+id/teamName2"
+            android:layout_marginStart="86dp"
+            android:layout_marginLeft="86dp"
+            android:onClick="increaseScore"
+            android:layout_marginTop="33dp"
+            android:layout_toEndOf="@+id/scoreTeam2"
+            android:layout_toRightOf="@+id/scoreTeam2"
+            style="@style/PlusButtons"/>
+
+    </RelativeLayout>
+</LinearLayout>
